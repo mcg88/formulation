@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { supabase, Category } from '../lib/supabase';
+import { supabase, type Category } from '../lib/supabase';
 import { useAuth } from '../contexts/AuthContext';
 
 export default function Categories() {

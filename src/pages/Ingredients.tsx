@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { supabase, Ingredient, Category, InventoryPurchase } from '../lib/supabase';
+import { supabase, type Ingredient, type Category, type InventoryPurchase } from '../lib/supabase';
 import { useAuth } from '../contexts/AuthContext';
 
 export default function Ingredients() {
@@ -9,7 +9,6 @@ export default function Ingredients() {
   const [loading, setLoading] = useState(true);
   const [showIngredientForm, setShowIngredientForm] = useState(false);
   const [showPurchaseForm, setShowPurchaseForm] = useState(false);
-  const [selectedIngredient, setSelectedIngredient] = useState<Ingredient | null>(null);
   const { user } = useAuth();
 
   const [ingredientForm, setIngredientForm] = useState({

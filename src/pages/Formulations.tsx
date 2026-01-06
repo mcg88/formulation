@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import {
   supabase,
-  Formulation,
-  FormulationIngredient,
-  Ingredient,
-  InventoryPurchase,
+  type Formulation,
+  type FormulationIngredient,
+  type Ingredient,
+  type InventoryPurchase,
 } from '../lib/supabase';
 import { useAuth } from '../contexts/AuthContext';
 
@@ -407,7 +407,6 @@ export default function Formulations() {
             <FormulationCard
               key={formulation.id}
               formulation={formulation}
-              ingredients={ingredients}
               onDelete={handleDeleteFormulation}
               isExpanded={selectedFormulation === formulation.id}
               onToggle={() =>
@@ -425,13 +424,11 @@ export default function Formulations() {
 
 function FormulationCard({
   formulation,
-  ingredients,
   onDelete,
   isExpanded,
   onToggle,
 }: {
   formulation: Formulation;
-  ingredients: Ingredient[];
   onDelete: (id: string) => void;
   isExpanded: boolean;
   onToggle: () => void;
