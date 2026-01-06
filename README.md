@@ -44,7 +44,12 @@ npm install
 2. Create a new project
 3. Go to the SQL Editor in your Supabase dashboard
 4. Copy the entire contents of `DATABASE_SCHEMA.md` and run it in the SQL Editor
-5. Go to Settings > API to get your project URL and anon key
+5. **Configure Authentication URLs** (IMPORTANT):
+   - Go to Authentication > URL Configuration
+   - Set **Site URL** to `http://localhost:5173`
+   - Add `http://localhost:5173/**` to **Redirect URLs**
+   - (Later, add your production URL when deployed)
+6. Go to Settings > API to get your project URL and anon key
 
 ### 3. Configure Environment Variables
 
@@ -88,6 +93,12 @@ The app will be available at `http://localhost:5173`
 
 5. Click "Deploy"
 
+6. **Update Supabase URLs** (IMPORTANT):
+   - Once deployed, go back to your Supabase project
+   - Go to Authentication > URL Configuration
+   - Update **Site URL** to your Vercel URL (e.g., `https://your-project.vercel.app`)
+   - Add `https://your-project.vercel.app/**` to **Redirect URLs**
+
 Your app will be live at `https://your-project.vercel.app`
 
 ### Alternative: Deploy to Netlify (Free)
@@ -107,6 +118,12 @@ Your app will be live at `https://your-project.vercel.app`
 6. Add environment variables in Netlify dashboard
 
 7. Click "Deploy site"
+
+8. **Update Supabase URLs** (IMPORTANT):
+   - Once deployed, go back to your Supabase project
+   - Go to Authentication > URL Configuration
+   - Update **Site URL** to your Netlify URL
+   - Add your Netlify URL with `/**` to **Redirect URLs**
 
 ## Usage
 
