@@ -71,3 +71,80 @@ export interface FormulationIngredient {
   updated_at: string;
   ingredient?: Ingredient;
 }
+
+// Accounting Types
+export interface ExpenseCategory {
+  id: string;
+  user_id: string;
+  name: string;
+  description?: string;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface Expense {
+  id: string;
+  user_id: string;
+  category_id?: string;
+  date: string;
+  description: string;
+  amount: number;
+  vendor?: string;
+  payment_method?: string;
+  receipt_url?: string;
+  notes?: string;
+  created_at: string;
+  updated_at: string;
+  category?: ExpenseCategory;
+}
+
+export interface IncomeCategory {
+  id: string;
+  user_id: string;
+  name: string;
+  description?: string;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface Income {
+  id: string;
+  user_id: string;
+  category_id?: string;
+  date: string;
+  description: string;
+  amount: number;
+  source?: string;
+  payment_method?: string;
+  order_id?: string;
+  customer_name?: string;
+  notes?: string;
+  created_at: string;
+  updated_at: string;
+  category?: IncomeCategory;
+}
+
+export interface Asset {
+  id: string;
+  user_id: string;
+  name: string;
+  asset_type: string;
+  current_value: number;
+  purchase_date?: string;
+  notes?: string;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface Liability {
+  id: string;
+  user_id: string;
+  name: string;
+  liability_type: string;
+  amount: number;
+  due_date?: string;
+  creditor?: string;
+  notes?: string;
+  created_at: string;
+  updated_at: string;
+}

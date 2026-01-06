@@ -1,10 +1,10 @@
-# Cosmetics Formulation Manager
+# Noita Dashboard
 
-A web application for managing cosmetic formulations, ingredients, and inventory. Features batch scaling, cost tracking, and percentage-based formulation management.
+A comprehensive business management system for cosmetics makers. Manage formulations, track inventory, handle accounting (expenses & income), and generate financial reports.
 
 ## Features
 
-- **Authentication** - Secure user authentication via Supabase
+### Product Management
 - **Formulation Management** - Create and manage cosmetic formulations with:
   - Percentage and weight-based ingredient tracking
   - Batch size scaling (scale up or down)
@@ -14,11 +14,32 @@ A web application for managing cosmetic formulations, ingredients, and inventory
   - Editable categories
   - Notes and descriptions
   - Cost per unit tracking
-- **Inventory Tracking** - Track purchases with:
+- **Inventory Tracking** - Track ingredient purchases with:
   - Supplier information
   - Purchase date and cost
   - Quantity and units
   - Automatic cost-per-unit calculation
+
+### Accounting & Finance
+- **Expense Tracking** - Manage business expenses:
+  - Categorized expense management
+  - Vendor tracking
+  - Payment method recording
+  - Date-based organization
+- **Income Tracking** - Record revenue:
+  - Multiple income sources (Etsy, Squarespace, custom)
+  - CSV import functionality
+  - Order and customer tracking
+  - Payment method recording
+- **Financial Reports**:
+  - Income Statement (P&L) with date range selection
+  - Balance Sheet with assets and liabilities
+  - Category-wise breakdowns
+  - Net income calculations
+
+### General
+- **Authentication** - Secure user authentication via Supabase
+- **Dashboard** - Overview of all business metrics
 
 ## Tech Stack
 

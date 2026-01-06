@@ -7,6 +7,9 @@ import Dashboard from './pages/Dashboard';
 import Categories from './pages/Categories';
 import Ingredients from './pages/Ingredients';
 import Formulations from './pages/Formulations';
+import Expenses from './pages/Expenses';
+import Income from './pages/Income';
+import Reports from './pages/Reports';
 
 function App() {
   return (
@@ -26,6 +29,9 @@ function App() {
             <Route path="categories" element={<Categories />} />
             <Route path="ingredients" element={<Ingredients />} />
             <Route path="formulations" element={<Formulations />} />
+            <Route path="expenses" element={<Expenses />} />
+            <Route path="income" element={<Income />} />
+            <Route path="reports" element={<Reports />} />
           </Route>
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
